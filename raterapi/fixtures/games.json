@@ -1,0 +1,82 @@
+[
+    {
+      "model": "raterapi.Game",
+      "pk": 1,
+      "fields": {
+        "title": "Catan",
+        "description": "Collect and trade resources to build the most powerful settlements on the island of Catan.",
+        "designer": "Klaus Teuber",
+        "year_released": 1995,
+        "number_of_players": 4,
+        "estimated_time_to_play": 90,
+        "age_recommendation": 10,
+        "player_id": 1,
+        "created_at": "2024-09-16T15:00:00Z",
+        "updated_at": "2024-09-16T15:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Game",
+      "pk": 2,
+      "fields": {
+        "title": "Ticket to Ride",
+        "description": "Collect train cards to build railway routes connecting cities across North America.",
+        "designer": "Alan R. Moon",
+        "year_released": 2004,
+        "number_of_players": 5,
+        "estimated_time_to_play": 60,
+        "age_recommendation": 8,
+        "player_id": 2,
+        "created_at": "2024-09-16T16:00:00Z",
+        "updated_at": "2024-09-16T16:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Game",
+      "pk": 3,
+      "fields": {
+        "title": "Pandemic",
+        "description": "Work together as a team to save humanity from four deadly diseases spreading across the globe.",
+        "designer": "Matt Leacock",
+        "year_released": 2008,
+        "number_of_players": 4,
+        "estimated_time_to_play": 45,
+        "age_recommendation": 8,
+        "player_id": 3,
+        "created_at": "2024-09-16T17:00:00Z",
+        "updated_at": "2024-09-16T17:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Game",
+      "pk": 4,
+      "fields": {
+        "title": "7 Wonders",
+        "description": "Lead an ancient civilization to build architectural marvels and develop military, science, and commerce.",
+        "designer": "Antoine Bauza",
+        "year_released": 2010,
+        "number_of_players": 7,
+        "estimated_time_to_play": 30,
+        "age_recommendation": 10,
+        "player_id": 4,
+        "created_at": "2024-09-16T18:00:00Z",
+        "updated_at": "2024-09-16T18:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Game",
+      "pk": 5,
+      "fields": {
+        "title": "Azul",
+        "description": "Compete to create the most beautiful mosaic pattern on the walls of the Royal Palace of Evora.",
+        "designer": "Michael Kiesling",
+        "year_released": 2017,
+        "number_of_players": 4,
+        "estimated_time_to_play": 45,
+        "age_recommendation": 8,
+        "player_id": 5,
+        "created_at": "2024-09-16T19:00:00Z",
+        "updated_at": "2024-09-16T19:00:00Z"
+      }
+    }
+  ]

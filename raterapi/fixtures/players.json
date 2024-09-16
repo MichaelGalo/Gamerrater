@@ -1,0 +1,57 @@
+[
+    {
+      "model": "raterapi.Player",
+      "pk": 1,
+      "fields": {
+        "username": "boardgamer123",
+        "email": "boardgamer123@example.com",
+        "password": "hashed_password_here",
+        "created_at": "2024-09-16T10:00:00Z",
+        "updated_at": "2024-09-16T10:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Player",
+      "pk": 2,
+      "fields": {
+        "username": "meeplemaster",
+        "email": "meeplemaster@example.com",
+        "password": "hashed_password_here",
+        "created_at": "2024-09-16T11:00:00Z",
+        "updated_at": "2024-09-16T11:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Player",
+      "pk": 3,
+      "fields": {
+        "username": "strategyqueen",
+        "email": "strategyqueen@example.com",
+        "password": "hashed_password_here",
+        "created_at": "2024-09-16T12:00:00Z",
+        "updated_at": "2024-09-16T12:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Player",
+      "pk": 4,
+      "fields": {
+        "username": "dicethrower",
+        "email": "dicethrower@example.com",
+        "password": "hashed_password_here",
+        "created_at": "2024-09-16T13:00:00Z",
+        "updated_at": "2024-09-16T13:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Player",
+      "pk": 5,
+      "fields": {
+        "username": "cardshuffler",
+        "email": "cardshuffler@example.com",
+        "password": "hashed_password_here",
+        "created_at": "2024-09-16T14:00:00Z",
+        "updated_at": "2024-09-16T14:00:00Z"
+      }
+    }
+  ]
