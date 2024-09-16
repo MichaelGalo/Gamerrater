@@ -1,57 +1,82 @@
 [
-    {
-      "model": "raterapi.Player",
-      "pk": 1,
-      "fields": {
-        "username": "boardgamer123",
-        "email": "boardgamer123@example.com",
-        "password": "hashed_password_here",
-        "created_at": "2024-09-16T10:00:00Z",
-        "updated_at": "2024-09-16T10:00:00Z"
-      }
-    },
-    {
-      "model": "raterapi.Player",
-      "pk": 2,
-      "fields": {
-        "username": "meeplemaster",
-        "email": "meeplemaster@example.com",
-        "password": "hashed_password_here",
-        "created_at": "2024-09-16T11:00:00Z",
-        "updated_at": "2024-09-16T11:00:00Z"
-      }
-    },
-    {
-      "model": "raterapi.Player",
-      "pk": 3,
-      "fields": {
-        "username": "strategyqueen",
-        "email": "strategyqueen@example.com",
-        "password": "hashed_password_here",
-        "created_at": "2024-09-16T12:00:00Z",
-        "updated_at": "2024-09-16T12:00:00Z"
-      }
-    },
-    {
-      "model": "raterapi.Player",
-      "pk": 4,
-      "fields": {
-        "username": "dicethrower",
-        "email": "dicethrower@example.com",
-        "password": "hashed_password_here",
-        "created_at": "2024-09-16T13:00:00Z",
-        "updated_at": "2024-09-16T13:00:00Z"
-      }
-    },
-    {
-      "model": "raterapi.Player",
-      "pk": 5,
-      "fields": {
-        "username": "cardshuffler",
-        "email": "cardshuffler@example.com",
-        "password": "hashed_password_here",
-        "created_at": "2024-09-16T14:00:00Z",
-        "updated_at": "2024-09-16T14:00:00Z"
-      }
-    }
-  ]
+  {
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$5FmhxcGx9XLGJtTDDpQBxp$1qm4L1dlPvKBeHqb8z+6DVZZRSiHX/1WO4R9pTjXjDI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alice@example.com",
+    "first_name": "Alice",
+    "last_name": "Johnson",
+    "email": "alice@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-16T10:00:00Z"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$QyWNzC1ZLbBXmpjGJK0tg2$8rG3J5Jh6qUjUIK1VgEJt9b8QSnZ6K4hs/5Z9S2hGYE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bob@example.com",
+    "first_name": "Bob",
+    "last_name": "Smith",
+    "email": "bob@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-16T11:00:00Z"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$Xt7TgHq9LJfKwRmNzC1ZLb$3J5Jh6qUjUIK1VgEJt9b8QSnZ6K4hs/5Z9S2hGYE8rG=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "carol@example.com",
+    "first_name": "Carol",
+    "last_name": "Williams",
+    "email": "carol@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-16T12:00:00Z"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$BXmpjGJK0tg2QyWNzC1ZL$VgEJt9b8QSnZ6K4hs/5Z9S2hGYE8rG3J5Jh6qUjUIK1=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "david@example.com",
+    "first_name": "David",
+    "last_name": "Brown",
+    "email": "david@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-16T13:00:00Z"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$LbBXmpjGJK0tg2QyWNzC1Z$8QSnZ6K4hs/5Z9S2hGYE8rG3J5Jh6qUjUIK1VgEJt9b=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "emma@example.com",
+    "first_name": "Emma",
+    "last_name": "Davis",
+    "email": "emma@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-16T14:00:00Z"
+  }
+}
+]

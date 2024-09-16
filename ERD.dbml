@@ -4,7 +4,6 @@ Table User {
   email varchar [unique, not null]
   password varchar [not null]
   created_at datetime
-  updated_at datetime
 }
 
 Table Game {
@@ -18,7 +17,6 @@ Table Game {
   age_recommendation int
   user_id int [ref: > user.id]
   created_at datetime
-  updated_at datetime
   average_rating float [note: 'Custom model property to calculate average rating']
 }
 

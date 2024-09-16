@@ -11,17 +11,15 @@ class Game(models.Model):
     number_of_players = models.IntegerField()
     estimated_time_to_play = models.IntegerField()
     age_recommendation = models.IntegerField()
-    player = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
 
     @property
     def average_rating(self):
-        ratings = Rating.objects.filter(game=self)
-        total = 0
-        for rating in ratings:
-            total += rating.rating
-        if len(ratings) > 0:
-            return total / len(ratings)
-        else:
-            return 0
+        ratings = self.ratings.all()
+        if ratings:
+            return sum(rating.score for rating in ratings) / len(ratings)
+        return 0
