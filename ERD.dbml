@@ -1,4 +1,4 @@
-Table Player {
+Table User {
   id int [pk, increment]
   username varchar [unique, not null]
   email varchar [unique, not null]
@@ -13,10 +13,10 @@ Table Game {
   description text
   designer varchar
   year_released int
-  number_of_players int
+  number_of_users int
   estimated_time_to_play int
   age_recommendation int
-  player_id int [ref: > Player.id]
+  user_id int [ref: > user.id]
   created_at datetime
   updated_at datetime
   average_rating float [note: 'Custom model property to calculate average rating']
@@ -36,7 +36,7 @@ Table Picture {
   id int [pk, increment]
   url varchar [not null]
   game_id int [ref: > Game.id]
-  player_id int [ref: > Player.id]
+  user_id int [ref: > user.id]
   uploaded_at datetime
 }
 
@@ -44,7 +44,7 @@ Table Rating {
   id int [pk, increment]
   score int [not null, note: 'Rating score from 1 to 5']
   game_id int [ref: > Game.id]
-  player_id int [ref: > Player.id]
+  user_id int [ref: > user.id]
   created_at datetime
 }
 
@@ -52,16 +52,16 @@ Table Review {
   id int [pk, increment]
   content text [not null]
   game_id int [ref: > Game.id]
-  player_id int [ref: > Player.id]
+  user_id int [ref: > user.id]
   created_at datetime
 }
 
 Ref: Game.id < Rating.game_id
 Ref: Game.id < Review.game_id
 Ref: Game.id < Picture.game_id
-Ref: Player.id < Game.player_id
-Ref: Player.id < Rating.player_id
-Ref: Player.id < Review.player_id
-Ref: Player.id < Picture.player_id
+Ref: user.id < Game.user_id
+Ref: user.id < Rating.user_id
+Ref: user.id < Review.user_id
+Ref: user.id < Picture.user_id
 Ref: Game.id < GameCategory.game_id
 Ref: Category.id < GameCategory.category_id
