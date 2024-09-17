@@ -15,5 +15,5 @@ class CategoriesViewSet(viewsets.ModelViewSet):
     `update`, and `destroy` actions for the Game model.
     """
 
-    queryset = Game.objects.all()
+    queryset = Category.objects.all()
     serializer_class = CategoriesSerializer
