@@ -1,4 +1,4 @@
-Table User {
+Table user {
   id int [pk, increment]
   username varchar [unique, not null]
   email varchar [unique, not null]
