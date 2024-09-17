@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from .rating import Rating
+from .category import Category
 
 
 class Game(models.Model):
@@ -13,6 +14,9 @@ class Game(models.Model):
     age_recommendation = models.IntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+    categories = models.ManyToManyField(
+        "Category", through="GameCategory", related_name="games"
+    )
 
     def __str__(self):
         return self.title
