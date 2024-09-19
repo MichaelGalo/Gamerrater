@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from raterapi.models import Game, Category
+from raterapi.models import Game, Category, Review
 from rest_framework import serializers
 from rest_framework import status
 from rest_framework.response import Response
@@ -47,8 +47,15 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = ("id", "name")
 
 
+class ReviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Review
+        fields = ("id", "content", "user", "created_at")
+
+
 class GameSerializer(serializers.ModelSerializer):
     categories = CategorySerializer(many=True)
+    reviews = ReviewSerializer(many=True, read_only=True, source="review_set")
 
     class Meta:
         model = Game
@@ -63,4 +70,5 @@ class GameSerializer(serializers.ModelSerializer):
             "age_recommendation",
             "average_rating",
             "categories",
+            "reviews",
         )
