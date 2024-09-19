@@ -3,6 +3,7 @@ from raterapi.models import Game, Category, Review
 from rest_framework import serializers
 from rest_framework import status
 from rest_framework.response import Response
+from django.contrib.auth.models import User
 
 
 class GameViewSet(viewsets.ViewSet):
@@ -47,7 +48,15 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = ("id", "name")
 
 
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ("id", "username", "first_name", "last_name")
+
+
 class ReviewSerializer(serializers.ModelSerializer):
+    user = UserSerializer(many=False, read_only=True)
+
     class Meta:
         model = Review
         fields = ("id", "content", "user", "created_at")
