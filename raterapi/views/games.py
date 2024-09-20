@@ -11,12 +11,14 @@ class GameViewSet(viewsets.ViewSet):
 
     def list(self, request):
         search_text = request.query_params.get("q", None)
+        order_by = request.query_params.get("orderby", "title")
+
         if search_text:
             games = Game.objects.filter(
                 Q(title__contains=search_text)
                 | Q(description__contains=search_text)
                 | Q(designer__contains=search_text)
-            )
+            ).order_by(order_by)
         else:
             games = Game.objects.all()
 
