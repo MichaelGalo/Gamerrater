@@ -23,7 +23,9 @@ class Game(models.Model):
 
     @property
     def average_rating(self):
+        """Average rating calculated attribute for each game"""
         ratings = self.ratings.all()
+
         if ratings:
             return sum(rating.score for rating in ratings) / len(ratings)
         return 0

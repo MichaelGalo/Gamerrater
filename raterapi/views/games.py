@@ -102,4 +102,5 @@ class GameSerializer(serializers.ModelSerializer):
             "categories",
             "reviews",
             "user",
+            "average_rating",
         )
