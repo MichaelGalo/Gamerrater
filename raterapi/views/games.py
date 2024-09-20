@@ -59,7 +59,7 @@ class GameViewSet(viewsets.ViewSet):
             category = Category.objects.get(pk=category_id)
             game.categories.add(category)
 
-        return Response({}, status=status.HTTP_204_NO_CONTENT)
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -85,6 +85,7 @@ class ReviewSerializer(serializers.ModelSerializer):
 class GameSerializer(serializers.ModelSerializer):
     categories = CategorySerializer(many=True)
     reviews = ReviewSerializer(many=True, read_only=True, source="review_set")
+    user = UserSerializer(many=False, read_only=True)
 
     class Meta:
         model = Game
@@ -100,4 +101,5 @@ class GameSerializer(serializers.ModelSerializer):
             "average_rating",
             "categories",
             "reviews",
+            "user",
         )
