@@ -4,8 +4,8 @@ from .game import Game
 
 
 class Picture(models.Model):
-    game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name="pictures")
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    game_id = models.ForeignKey(Game, on_delete=models.CASCADE, related_name="pictures")
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     uploaded_at = models.DateTimeField(auto_now_add=True)
     action_pic = models.ImageField(
         upload_to="actionimages",

@@ -1,7 +1,7 @@
 import uuid
 import base64
 from django.core.files.base import ContentFile
-from raterapi.models import Picture
+from raterapi.models import Picture, Game
 from django.contrib.auth.models import User
 from rest_framework import viewsets
 from rest_framework import serializers
@@ -19,9 +19,17 @@ class PictureViewSet(viewsets.ViewSet):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def create(self, request):
+
+        try:
+            game = Game.objects.get(id=request.data["game_id"])
+        except Game.DoesNotExist:
+            return Response(
+                {"error": "Game not found"}, status=status.HTTP_404_NOT_FOUND
+            )
+
         game_image = Picture()
-        game_image.user = request.auth.user
-        game_image.game = request.data["game_id"]
+        game_image.user_id = request.auth.user
+        game_image.game_id = game
         format, imgstr = request.data["game_image"].split(";base64,")
         ext = format.split("/")[-1]
         data = ContentFile(
@@ -42,8 +50,15 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ("id", "username", "first_name", "last_name")
 
 
+class GameSerializer(serializers.ModelSerializer):
+    class Meta:
+        model: Game
+        fields = ("id", "title")
+
+
 class PictureSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)
+    game = GameSerializer(read_only=True)
 
     class Meta:
         model = Picture
