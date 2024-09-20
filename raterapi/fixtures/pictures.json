@@ -1,0 +1,52 @@
+[
+    {
+      "model": "raterapi.Picture",
+      "pk": 1,
+      "fields": {
+        "action_pic": "https://example.com/catan.jpg",
+        "game_id": 1,
+        "user_id": 1,
+        "uploaded_at": "2024-09-16T20:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Picture",
+      "pk": 2,
+      "fields": {
+        "action_pic": "https://example.com/ticket_to_ride.jpg",
+        "game_id": 2,
+        "user_id": 2,
+        "uploaded_at": "2024-09-16T21:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Picture",
+      "pk": 3,
+      "fields": {
+        "action_pic": "https://example.com/pandemic.jpg",
+        "game_id": 3,
+        "user_id": 3,
+        "uploaded_at": "2024-09-16T22:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Picture",
+      "pk": 4,
+      "fields": {
+        "action_pic": "https://example.com/7_wonders.jpg",
+        "game_id": 4,
+        "user_id": 4,
+        "uploaded_at": "2024-09-16T23:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Picture",
+      "pk": 5,
+      "fields": {
+        "action_pic": "https://example.com/azul.jpg",
+        "game_id": 5,
+        "user_id": 5,
+        "uploaded_at": "2024-09-17T00:00:00Z"
+      }
+    }
+  ]

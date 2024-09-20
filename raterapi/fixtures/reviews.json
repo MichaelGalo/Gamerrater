@@ -1,0 +1,52 @@
+[
+    {
+      "model": "raterapi.Review",
+      "pk": 1,
+      "fields": {
+        "content": "Catan is a classic strategy game that never gets old. The resource management and trading aspects make every game unique and exciting.",
+        "game_id": 1,
+        "user_id": 2,
+        "created_at": "2024-09-17T06:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Review",
+      "pk": 2,
+      "fields": {
+        "content": "Ticket to Ride is a fantastic family game. It's easy to learn but offers depth for more experienced players. The tension builds as you try to complete your routes!",
+        "game_id": 2,
+        "user_id": 3,
+        "created_at": "2024-09-17T07:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Review",
+      "pk": 3,
+      "fields": {
+        "content": "Pandemic is an excellent cooperative game that really makes you feel like you're working together to save the world. It can be challenging, but that's part of the fun!",
+        "game_id": 3,
+        "user_id": 4,
+        "created_at": "2024-09-17T08:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Review",
+      "pk": 4,
+      "fields": {
+        "content": "7 Wonders is a great game for larger groups. The simultaneous play keeps everyone engaged, and the different strategies you can pursue make it highly replayable.",
+        "game_id": 4,
+        "user_id": 5,
+        "created_at": "2024-09-17T09:00:00Z"
+      }
+    },
+    {
+      "model": "raterapi.Review",
+      "pk": 5,
+      "fields": {
+        "content": "Azul is a beautiful abstract game with simple rules but deep strategy. The tile-laying mechanism is satisfying, and the end-game scoring can lead to some surprising results!",
+        "game_id": 5,
+        "user_id": 1,
+        "created_at": "2024-09-17T10:00:00Z"
+      }
+    }
+  ]
