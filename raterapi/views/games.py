@@ -4,13 +4,23 @@ from rest_framework import serializers
 from rest_framework import status
 from rest_framework.response import Response
 from django.contrib.auth.models import User
+from django.db.models import Q
 
 
 class GameViewSet(viewsets.ViewSet):
 
     def list(self, request):
-        queryset = Game.objects.all()
-        serializer = GameSerializer(queryset, many=True, context={"request": request})
+        search_text = request.query_params.get("q", None)
+        if search_text:
+            games = Game.objects.filter(
+                Q(title__contains=search_text)
+                | Q(description__contains=search_text)
+                | Q(designer__contains=search_text)
+            )
+        else:
+            games = Game.objects.all()
+
+        serializer = GameSerializer(games, many=True, context={"request": request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def retrieve(self, request, pk=None):
